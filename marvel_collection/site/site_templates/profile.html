@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == "auth-success" %}
+                <div class="col-12">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="row">
+    <div class="profile">
+        <div class="col-12 col-md-8">
+            <img src="../../static/images/team.jpg" alt="Marvel Team" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-8">
+            <h1>Profile Details:</h1>
+        </div>
+        <div class="col-12 col-md-8">
+            {% if current_user.last_name %}
+            <b>Name:</b> {{ current_user.first_name }} {{ current_user.last_name }}<br>
+            {% else %}
+            <b>Name:</b> {{ current_user.first_name }}<br>
+            {% endif %}
+            <b>Email:</b> {{ current_user.email }}<br>
+            <b>Token:</b> {{ current_user.token }}<br>
+        </div>
+    </div>
+</div>
+{% endblock content %}

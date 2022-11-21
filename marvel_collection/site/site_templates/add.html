@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == "char-added" %}
+                <div class="col-12">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="row">
+    <div class="profile">
+        <div class="col-12 col-md-8">
+            <img src="../../static/images/team2.jpg" alt="Marvel Team" class="img-fluid">
+        </div>
+
+        <div class="col-12 col-md-8">
+            <h3>Add a Marvel Character to Your Collection!</h3>
+            <h6>Fields marked with (*) are required</h6>
+                {% include 'addmarvelform.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="form">
+    <div class="col-4">
+        <img src="../../static/images/loki.png" alt="Loki" class="img-fluid" style="padding-top:1vh;">
+    </div>
+
+    <div class="col-6">
+        <h1>Sign Up Here!</h1>
+        <h6>Fields marked with (*) are required</h6>
+            {% include 'signupform.html' %}
+    </div>
+</div>
+{% endblock content %}

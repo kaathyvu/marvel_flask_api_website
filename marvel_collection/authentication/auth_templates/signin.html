@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == "user-created" %}
+                <div class="col-12">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == "auth-failed" %}
+                <div class="col-12">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="form">
+    <div class="col-6">
+        <h1>Sign In Here!</h1>
+            {% include 'signinform.html' %}
+    </div>
+
+    <div class="col-5">
+        <img src="../../static/images/Scarlet_Witch_Portrait_Art.png" alt="Scarlet Witch" class="img-fluid" style="padding-top:2vh;">
+    </div>
+
+</div>
+{% endblock content %}

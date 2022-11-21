@@ -1,0 +1,155 @@
+body {
+    font-family: 'arimo', sans-serif;
+    background-image: url('../images/long.jpg'), url('../images/long.jpg');
+    background-position:left top, right top;
+    background-repeat:no-repeat no-repeat;
+    background-attachment: fixed;
+    background-size:60vh, 60vh;
+    font-size:100%;
+}
+
+.container {
+    background-color:white;
+    max-width:70%;
+    display:flex;
+    flex-direction: column;
+}
+
+nav a:link, a:visited {
+    font-family: 'Bangers', cursive;
+    color: black;
+    text-decoration: none;
+    font-size: 2.5em;
+    padding-left: 5vh;
+}
+
+nav a:hover {
+    font-family: 'Bangers', cursive;
+    color: #d61a28 ;
+    text-decoration: none;
+    font-size: 2.5em;
+    padding-left: 5vh;
+    transition:0.25s ease;
+}
+
+#logo {
+    margin:1vh 0 1vh -3vh;
+    max-width:25vh
+}
+
+header hr {
+    color:white;
+}
+
+header h1 {
+    font-family: 'bangers',cursive;
+    font-size:3.5em;
+    line-height:1em;
+    margin-left:1vw;
+}
+
+header h3 {
+    margin-left:1vw;
+    font-size:1.5em;
+}
+
+#headerbutton input[type=button] {
+    font-family:'bangers',cursive;
+    color:white;
+    font-size:34px;
+    border-radius:7px;
+    border:2px solid #d61a28;
+    background-color: #d61a28;
+    padding:0 4vh 0 4vh;
+    margin:0.5vw 0 0 1vw;
+}
+
+#headerbutton input[type=button]:hover {
+    font-family:'bangers',cursive;
+    color:#d61a28;
+    font-size:34px;
+    border-radius:7px;
+    border:2px solid #d61a28;
+    background-color: white;
+    padding:0 4vh 0 4vh;
+    transition:0.2s ease;
+    margin:0.5vw 0 0 1vw;
+}
+
+.main, .profile {
+    margin:10vh 11vw 10vh 11vw;
+}
+
+.main h1 {
+    font-family: 'bangers', cursive;
+    font-size:3.5em;
+    color:black;
+    text-align: center;
+    line-height:1em;
+}
+
+.main h3, .form h3, .profile h3 {
+    font-family: 'bangers', cursive;
+    font-size:2.1em;
+    color:black;
+}
+
+.main h6, .form h6 {
+    font-size:1em;
+}
+
+.main hr {
+    color:white;
+    margin-top:15vh;
+}
+
+.form {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form h1, .profile h1, footer h1 {
+    font-family: 'bangers', cursive;
+    font-size:3.5em;
+    color:black;
+    line-height: 1em;
+}
+
+.form-control {
+    font-family: 'arimo', sans-serif;
+}
+
+.form-group {
+    font-family: 'arimo', sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding-bottom:3vh;
+}
+
+.signupbutton {
+    font-family:'bangers',cursive;
+    color:white;
+    font-size:2.1em;
+    border-radius:7px;
+    border:2px solid #d61a28;
+    background-color: #d61a28;
+    padding:0 4vh 0 4vh;
+    margin:1vh 0.5vw 0 0.5vw;
+}
+
+.signupbutton:hover {
+    font-family:'bangers',cursive;
+    color:#d61a28;
+    font-size:2.1;
+    border-radius:7px;
+    border:2px solid #d61a28;
+    background-color: white;
+    padding:0 4vh 0 4vh;
+    transition:0.2s ease;
+    margin:1vh 0.5vw 0 0.5vw;
+}

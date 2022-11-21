@@ -1,0 +1,36 @@
+<form method="POST">
+    {{ marvelcharform.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="superhero-field">
+            {{ marvelcharform.superhero_name.label }}
+            {{ marvelcharform.superhero_name(class="form-control", placeholder="Enter Superhero Name") }}
+        </fieldset>
+
+        <fieldset id="name-field">
+            {{ marvelcharform.name.label }}
+            {{ marvelcharform.name(class="form-control", placeholder="Enter Name") }}
+        </fieldset>
+
+        <fieldset id="description-field">
+            {{ marvelcharform.description.label }}
+            {{ marvelcharform.description(class="form-control", placeholder="Enter Description") }}
+        </fieldset>
+        
+        <fieldset id="num-comics-field">
+            {{ marvelcharform.num_of_comics.label }}
+            {{ marvelcharform.num_of_comics(class="form-control", placeholder="Enter Number of Comics") }}
+        </fieldset>
+
+        <fieldset id="superpower-field">
+            {{ marvelcharform.superpower.label }}
+            {{ marvelcharform.superpower(class="form-control", placeholder="Enter Superpower or Specialty") }}
+        </fieldset>
+
+        <fieldset id="user-token-field">
+            {{ marvelcharform.user_token.label }}
+            {{ marvelcharform.user_token(class="form-control", readonly=True, value=current_user.token) }}
+        </fieldset>
+
+            {{ marvelcharform.submit_button(class="signupbutton")}}
+    </div>
+</form>
